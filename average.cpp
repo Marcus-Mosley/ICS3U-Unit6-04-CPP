@@ -20,7 +20,7 @@ float array_average(int (&passed_number_array)[rows][cols]) {
             sum += passed_number_array[row_value][column_value];
     }
 
-    float average = sum / 6;
+    float average = sum / 6.00;
 
     return average;
 }
@@ -53,6 +53,6 @@ int main() {
     // Call Functions
     average = array_average(number_array);
 
-    std::cout << "The average is " << std::setprecision(2) << average
-    << std::endl;
+    std::cout << "The average is " << std::fixed << std::setprecision(2)
+        << std::setfill('0') << average << std::endl;
 }
